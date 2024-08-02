@@ -19,4 +19,9 @@ public class Customer:User
         MembershipLevel=NewMembership;
     }
 
+        public void LetShowDetails()
+    {
+        ShowDetails();
+    }
+
 }

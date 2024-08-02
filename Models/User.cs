@@ -30,7 +30,7 @@ public class User
         Address = address;
     }
 
-    protected virtual void ShowDetails()
+    protected void ShowDetails()
     {
         Console.Write(@$"
         Id: {Id}
@@ -44,9 +44,7 @@ public class User
 
     }
 
-    public virtual void LetShowDetails(){
-        ShowDetails();
-    }
+ 
 
     protected int CalculateAge()
     {
