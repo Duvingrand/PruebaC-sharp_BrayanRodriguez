@@ -17,7 +17,7 @@ public class User
     protected string? PhoneNumber { get; set; }
     protected string? Address { get; set; }
 
-    protected User(string name, string lastn, string doc, string idnum, byte year, byte month, byte day, string mail, string phone, string address)
+    protected User(string name, string lastn, string doc, string idnum, int year, byte month, byte day, string mail, string phone, string address)
     {
         Id = Guid.NewGuid();
         Name = name;
