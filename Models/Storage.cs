@@ -7,9 +7,10 @@ namespace PruebaC_sharp_BrayanRodriguez.Models;
 
 public class Storage
 {
-    public static List<Driver>? Drivers { get; set; }
+    public static List<Driver>? Drivers { get; set; }=[];
     public static List<Vehicule>? Vehicules { get; set; }=[new Vehicule("AAA-000", "base", "0000", "0000", 0)];
-    public static List<Customer>? Customers { get; set; }
+    public static List<Customer>? Customers { get; set; }=[];
+
 
 
     public static void AddDriver(Driver driver) {
@@ -132,12 +133,38 @@ public class Storage
 
 
 
-    public static void ReadAllDriver() { }
-    public static void ReadAllVehicle() { }
-    public static void ReadAllCustomer() { }
+    public static void ReadAllDriver() { 
+        foreach (var i in Drivers)
+        {
+            Console.WriteLine("------------------------------------------------------------");
+            i.LetShowDetails();
+            Console.WriteLine("------------------------------------------------------------");
+        }
+    }
+    public static void ReadAllVehicle() { 
+                foreach (var i in Vehicules)
+        {
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine($"Id: {i.Idnum}");
+            Console.WriteLine($"Placa: {i.Placa}");
+            Console.WriteLine($"Tipo: {i.Tipo}");
+            Console.WriteLine($"Capacidad: {i.PeopleCapacity} personas");
+            Console.WriteLine("------------------------------------------------------------");
+        }
+    }
+    public static void ReadAllCustomer() {
+                foreach (var i in Customers)
+        {
+            Console.WriteLine("------------------------------------------------------------");
+            i.LetShowDetails();
+            Console.WriteLine("------------------------------------------------------------");
+        }
+     }
 
 
-    public static void UpdateDriver() { }
+    public static void UpdateDriver() {
+        
+     }
     public static void UpdateVehicle() { }
     public static void UpdateCustomer() { }
 

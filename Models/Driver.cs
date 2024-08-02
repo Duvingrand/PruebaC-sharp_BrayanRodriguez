@@ -31,4 +31,15 @@ public class Driver:User
         var settingVehicule = Storage.Vehicules.Find(v => v.Idnum == idVehicule);
     }
 
+    public override void LetShowDetails()
+    {
+        base.LetShowDetails();
+        Console.WriteLine(@$"
+        DATOS DE CONDUCTOR
+        Numero de licencia: {LicenseNumber}
+        Categoria de licencia: {LicenseCategory}
+        Años de experiencia: {DrivingExperience}
+        ");
+    }
+
 }

@@ -32,7 +32,7 @@ public class User
 
     protected virtual void ShowDetails()
     {
-        Console.WriteLine(@$"
+        Console.Write(@$"
         Id: {Id}
         Nombre: {Name} {LastName}
         Numero Documento: {TypeDocument}. {IdentificationNumber}
@@ -42,6 +42,10 @@ public class User
         Dirección {Address}
         ");
 
+    }
+
+    public virtual void LetShowDetails(){
+        ShowDetails();
     }
 
     protected int CalculateAge()

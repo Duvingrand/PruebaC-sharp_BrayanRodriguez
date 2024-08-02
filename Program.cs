@@ -13,3 +13,5 @@ Storage.AddDriver(new Driver("Duvin", "Vinigrand", "CC", "1000442277", 2002, 08,
 Storage.AddDriver(new Driver("Edward", "Correa", "CC", "32918557", 2000, 04, 24, "Edwardcoco@gmail.com"," 321858536","calle 49","356346354","A2",5));
 
 Storage.AddVehicle(new Vehicule("TGD-218", "carro", "2000", "2245", 5));
+
+Storage.ReadAllDriver();
